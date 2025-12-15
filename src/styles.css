@@ -1,3 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "tailwindcss";
+
+@theme {
+    --color-header-blue: #378EFF;
+    --color-header-gradient-dark: #143A6C;
+    --color-header-gradient-light: #2671D2;
+}
