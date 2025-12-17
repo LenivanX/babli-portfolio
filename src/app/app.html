@@ -1,69 +1,101 @@
-<div id="navbar" class="w-full font-[Inter] mx-auto grid grid-cols-5 font-medium my-10 text-[14px]">
-  <div class="flex justify-center gap-10 col-start-3">
-    <a href="#" class="hover:text-blue-500 transition-colors">Work</a>
-    <a href="#" class="hover:text-blue-500 transition-colors">About</a>
-    <a href="#" class="hover:text-blue-500 transition-colors">Contact</a>
+<div class="max-w-[1200px] mx-auto scroll-smooth">
+  <div id="navbar" class="relative flex w-full font-[Inter] mx-auto font-medium my-10 text-[16px]">
+    <div id="fixednavbar"
+      class="z-20 fixed flex justify-between left-1/2 -translate-x-1/2 w-1/4 rounded-full shadow-lg shadow-gray-400/25 place-items-center bg-white">
+      <div class="py-2 m-3 w-[81px] text-center"
+        [ngClass]="{'bg-black text-white rounded-full':activeSection()==='about','bg-white text-black':activeSection()!=='about'}">
+        <a href="#about" class="">
+          About
+        </a>
+      </div>
+      <div class="py-2 m-3 w-[81px] text-center"
+        [ngClass]="{'bg-black text-white rounded-full':activeSection()==='work','bg-white text-black':activeSection()!=='work'}">
+        <a href="#work" class="">
+          Work
+        </a>
+      </div>
+      <div class="py-2 m-3 w-[81px] text-center"
+        [ngClass]="{'bg-black text-white rounded-full':activeSection()==='contact','bg-white text-black':activeSection()!=='contact'}">
+        <a href="#contact" class="">
+          Contact
+        </a>
+      </div>
+    </div>
+    <div class="absolute flex gap-10 items-center right-0">
+      <a href={{linkedInLink()}} target="_blank"
+        class="items-center gap-1 hover:text-blue-500 transition-colors group flex">
+        <span>LinkedIn</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+      <a href={{resumeLink()}} target="_blank"
+        class="items-center gap-1 hover:text-blue-500 transition-colors group flex">
+        <span>Resume</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+    </div>
   </div>
-  <div class="flex justify-center gap-10 items-center col-start-5">
-    <a href={{linkedInLink()}} target="_blank"
-      class="items-center gap-1 hover:text-blue-500 transition-colors group flex">
-      <span>LinkedIn</span>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-        class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-      </svg>
-    </a>
-    <a href={{resumeLink()}} target="_blank"
-      class="items-center gap-1 hover:text-blue-500 transition-colors group flex">
-      <span>Resume</span>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-        class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-      </svg>
-    </a>
-  </div>
-</div>
 
-<div id="header" class="font-[Arapey] tracking-tight mt-30">
-  <div class="flex flex-col items-center">
-    <div class="flex flex-row items-center gap-5 text-center text-[50px] tracking-tighter">
-      <h1><span class="text-header-blue text-[64px]">Hello!</span> I’m Shreya</h1>
-      <div class="w-[78px] h-[80px] rotate-5 rounded-xl -translate-y-2 overflow-hidden hover:scale-110 hover:cursor-pointer transition-transform duration-200">
-        <img src={{header_profile()}} alt="" class="">
+  <section id="about" class="section font-[Arapey] tracking-tight mt-30 scroll-mt-40 h-screen">
+    <div class="flex flex-col items-center">
+      <div class="flex flex-row items-center gap-5 text-center text-[50px] tracking-tighter">
+        <h1><span class="text-[64px]">Hello!</span> I’m Shreya</h1>
+        <div
+          class="w-[78px] h-[80px] rotate-5 rounded-xl -translate-y-2 hover:scale-110 hover:cursor-pointer transition-transform duration-200">
+          <img src={{header_pin()}} alt="" class="absolute left-9 bottom-18">
+          <div class="border-2 border-white rounded-2xl overflow-hidden shadow-lg shadow-gray-400/50">
+            <img src={{header_profile()}} alt="" class="">
+          </div>
+        </div>
+        <span>Welcome to my portfolio!</span>
       </div>
-      <span>Welcome to my portfolio!</span>
-    </div>
-    <div class="text-center text-[48px] tracking-tighter -translate-y-6">
-      <h1>
-        Crafting <span class="text-header-blue italic font-medium font-[castoro]">bold</span> ideas into unforgettable
-        <span
-          class="text-[36px] bg-linear-to-r from-header-gradient-light to-header-gradient-dark px-3 py-2 rounded-full tracking-normal text-white">designs</span>
-      </h1>
-    </div>
-  </div>
-  <div class="flex flex-col items-center">
-    <div class="flex flex-row gap-5">
-      <div class="block translate-x-7">
-        <span class="font-[Gloria_Hallelujah] text-[18px]">Previously</span>
-      </div>
-      <div>
-        <img src={{header_arrow()}} alt="" class="translate-y-12" />
-      </div>
-      <div class="w-[78px] h-[80px] -rotate-11 translate-y-3 rounded-3xl overflow-hidden shadow-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200">
-        <img src={{header_box1()}} alt="" class="">
-      </div>
-      <div class="font-[Covered_by_your_grace] text-[64px] text-center">
-        <h1>&lt; UX Designer &gt;</h1>
-      </div>
-      <div class="w-[78px] h-[80px] rotate-8 translate-y-3 rounded-3xl overflow-hidden shadow-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200">
-        <img src={{header_box2()}} alt="" class="">
-      </div>
-      <div>
-        <img src={{header_arrow()}} alt="" class="scale-x-[-1] translate-y-12" />
-      </div>
-      <div class="block -translate-x-7">
-        <span class="font-[Gloria_Hallelujah] text-[18px]">Currently</span>
+      <div class="text-center text-[48px] tracking-tighter -translate-y-6">
+        <h1>
+          Crafting <span class="text-header-blue italic font-medium font-[castoro]">bold</span> ideas into unforgettable
+          <span
+            class="text-[36px] bg-linear-to-r from-header-gradient-light to-header-gradient-dark px-3 py-2 rounded-full tracking-normal text-white">designs</span>
+        </h1>
       </div>
     </div>
-  </div>
+    <div class="flex flex-col items-center">
+      <div class="flex flex-row gap-5">
+        <div class="block translate-x-7">
+          <span class="font-[Gloria_Hallelujah] text-[18px]">Previously</span>
+        </div>
+        <div>
+          <img src={{header_arrow()}} alt="" class="translate-y-12" />
+        </div>
+        <div
+          class="w-[78px] h-[80px] -rotate-11 translate-y-3 rounded-3xl overflow-hidden shadow-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200">
+          <img src={{header_box1()}} alt="" class="">
+        </div>
+        <div class="font-[Covered_by_your_grace] text-[64px] text-center">
+          <h1>&lt; UX Designer &gt;</h1>
+        </div>
+        <div
+          class="w-[78px] h-[80px] rotate-8 translate-y-3 rounded-3xl overflow-hidden shadow-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200">
+          <img src={{header_box2()}} alt="" class="">
+        </div>
+        <div>
+          <img src={{header_arrow()}} alt="" class="scale-x-[-1] translate-y-12" />
+        </div>
+        <div class="block -translate-x-7">
+          <span class="font-[Gloria_Hallelujah] text-[18px]">Currently</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="scroll-mt-40 h-screen">
+    <h1>WORK SECTION</h1>
+  </section>
+
+  <section id="contact" class="scroll-mt-40 h-screen">
+    <h1>CONTACT SECTION</h1>
+  </section>
 </div>
