@@ -18,6 +18,12 @@ export class App implements OnInit {
   protected readonly about_box1 = signal('header_box1.jpg');
   protected readonly about_box2 = signal('header_box2.jpg');
   protected readonly work_card1 = signal('work-card1.jpg');
+  protected readonly gallery_1 = signal('gallery-1.svg');
+  protected readonly gallery_2 = signal('gallery-2.svg');
+  protected readonly gallery_3 = signal('gallery-3.svg');
+  protected readonly gallery_4 = signal('gallery-4.svg');
+  protected readonly gallery_5 = signal('gallery-5.svg');
+  protected readonly gallery_6 = signal('gallery-6.svg');
 
   activeSection = signal('about');
 

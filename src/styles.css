@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "tailwindcss";
 
 @theme {
-    --color-about-blue: #378EFF;
+    --color-about-orange: #F09C00;
     --color-about-gradient-dark: #143A6C;
     --color-about-gradient-light: #2671D2;
     --color-work-gradient-dark: #202D3D;
     --color-work-gradient-light: #5479A3;
+    --color-bg-cream-yellow: #F7F3E7;
 }
