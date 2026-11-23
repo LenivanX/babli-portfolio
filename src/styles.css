@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-    --color-header-blue: #378EFF;
-    --color-header-gradient-dark: #143A6C;
-    --color-header-gradient-light: #2671D2;
+    --color-about-blue: #378EFF;
+    --color-about-gradient-dark: #143A6C;
+    --color-about-gradient-light: #2671D2;
+    --color-work-gradient-dark: #202D3D;
+    --color-work-gradient-light: #5479A3;
 }

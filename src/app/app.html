@@ -1,7 +1,7 @@
-<div class="max-w-[1200px] mx-auto scroll-smooth">
-  <div id="navbar" class="relative flex w-full font-[Inter] mx-auto font-medium my-10 text-[16px]">
+<div class="w-full mx-auto scroll-smooth">
+  <div id="navbar" class="relative flex max-w-[1200px] w-full font-[Inter] mx-auto font-medium my-10 text-[16px]">
     <div id="fixednavbar"
-      class="z-20 fixed flex justify-between left-1/2 -translate-x-1/2 w-1/4 rounded-full shadow-lg shadow-gray-400/25 place-items-center bg-white">
+      class="z-20 fixed flex justify-between left-1/2 -translate-x-1/2 w-[429px] rounded-full shadow-lg shadow-gray-400/25 place-items-center bg-white">
       <div class="py-2 m-3 w-[81px] text-center"
         [ngClass]="{'bg-black text-white rounded-full':activeSection()==='about','bg-white text-black':activeSection()!=='about'}">
         <a href="#about" class="">
@@ -41,24 +41,24 @@
     </div>
   </div>
 
-  <section id="about" class="section font-[Arapey] tracking-tight mt-30 scroll-mt-40 h-screen">
+  <section id="about" class="section font-[Arapey] tracking-tight mt-45 scroll-mt-45">
     <div class="flex flex-col items-center">
       <div class="flex flex-row items-center gap-5 text-center text-[50px] tracking-tighter">
         <h1><span class="text-[64px]">Hello!</span> I’m Shreya</h1>
         <div
           class="w-[78px] h-[80px] rotate-5 rounded-xl -translate-y-2 hover:scale-110 hover:cursor-pointer transition-transform duration-200">
-          <img src={{header_pin()}} alt="" class="absolute left-9 bottom-18">
+          <img src={{about_pin()}} alt="" class="absolute left-9 bottom-17">
           <div class="border-2 border-white rounded-2xl overflow-hidden shadow-lg shadow-gray-400/50">
-            <img src={{header_profile()}} alt="" class="">
+            <img src={{about_profile()}} alt="" class="">
           </div>
         </div>
         <span>Welcome to my portfolio!</span>
       </div>
       <div class="text-center text-[48px] tracking-tighter -translate-y-6">
         <h1>
-          Crafting <span class="text-header-blue italic font-medium font-[castoro]">bold</span> ideas into unforgettable
+          Crafting <span class="text-about-blue italic font-medium font-[castoro]">bold</span> ideas into unforgettable
           <span
-            class="text-[36px] bg-linear-to-r from-header-gradient-light to-header-gradient-dark px-3 py-2 rounded-full tracking-normal text-white">designs</span>
+            class="text-[36px] bg-linear-to-r from-about-gradient-light to-about-gradient-dark px-3 py-2 rounded-full tracking-normal text-white">designs</span>
         </h1>
       </div>
     </div>
@@ -68,21 +68,25 @@
           <span class="font-[Gloria_Hallelujah] text-[18px]">Previously</span>
         </div>
         <div>
-          <img src={{header_arrow()}} alt="" class="translate-y-12" />
+          <img src={{about_arrow()}} alt="" class="translate-y-12 scale-y-[-1] rotate-45" />
         </div>
         <div
-          class="w-[78px] h-[80px] -rotate-11 translate-y-3 rounded-3xl overflow-hidden shadow-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200">
-          <img src={{header_box1()}} alt="" class="">
+          class="w-[78px] h-[80px] -rotate-11 rounded-xl translate-y-3 hover:scale-110 hover:cursor-pointer transition-transform duration-200">
+          <div class="border-2 border-white rounded-2xl overflow-hidden shadow-lg shadow-gray-400/50">
+            <img src={{about_box1()}} alt="" class="">
+          </div>
         </div>
         <div class="font-[Covered_by_your_grace] text-[64px] text-center">
           <h1>&lt; UX Designer &gt;</h1>
         </div>
         <div
-          class="w-[78px] h-[80px] rotate-8 translate-y-3 rounded-3xl overflow-hidden shadow-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200">
-          <img src={{header_box2()}} alt="" class="">
+          class="w-[78px] h-[80px] rotate-8 rounded-xl translate-y-3 hover:scale-110 hover:cursor-pointer transition-transform duration-200">
+          <div class="border-2 border-white rounded-2xl overflow-hidden shadow-lg shadow-gray-400/50">
+            <img src={{about_box1()}} alt="" class="">
+          </div>
         </div>
         <div>
-          <img src={{header_arrow()}} alt="" class="scale-x-[-1] translate-y-12" />
+          <img src={{about_arrow()}} alt="" class="scale-x-[-1] scale-y-[-1] translate-y-12 -rotate-45" />
         </div>
         <div class="block -translate-x-7">
           <span class="font-[Gloria_Hallelujah] text-[18px]">Currently</span>
@@ -91,8 +95,13 @@
     </div>
   </section>
 
-  <section id="work" class="scroll-mt-40 h-screen">
-    <h1>WORK SECTION</h1>
+  <section id="work" class="w-[890px] h-[563px] mx-auto mt-45 scroll-mt-45">
+    <div class="w-full h-full rounded-4xl bg-linear-to-b from-work-gradient-dark to-work-gradient-light p-10 text-white">
+      <h1 class="font-medium text-[32px] font-[inter]">Flyberg, AI Based Travel Itinerary Planner</h1>
+      <h2 class="font-light text-[14px] font-[inter] mt-3">To redefine travel planning by eliminating the time-consuming and often overwhelming process of researching
+        and organizing trips (web version)</h2>
+        <img src="{{work_card1()}}" alt="" class="rounded-2xl w-[792px] h-[363px] mt-5">
+    </div>
   </section>
 
   <section id="contact" class="scroll-mt-40 h-screen">
