@@ -12,11 +12,18 @@ export class App implements OnInit {
   protected readonly title = signal('babli-portfolio');
   protected readonly linkedInLink = signal('https://www.linkedin.com/in/shreya-dey-89110b17b?utm_source=share_via&utm_content=profile&utm_medium=member_android');
   protected readonly resumeLink = signal('');
-  protected readonly header_profile = signal('header_profile.jpg');
-  protected readonly header_pin = signal('header_pin.svg');
-  protected readonly header_arrow = signal('header_arrow.svg');
-  protected readonly header_box1 = signal('header_box1.png');
-  protected readonly header_box2 = signal('header_box2.png');
+  protected readonly about_profile = signal('header_profile.jpg');
+  protected readonly about_pin = signal('header_pin.svg');
+  protected readonly about_arrow = signal('header_arrow.svg');
+  protected readonly about_box1 = signal('header_box1.jpg');
+  protected readonly about_box2 = signal('header_box2.jpg');
+  protected readonly work_card1 = signal('work-card1.jpg');
+  protected readonly gallery_1 = signal('gallery-1.svg');
+  protected readonly gallery_2 = signal('gallery-2.svg');
+  protected readonly gallery_3 = signal('gallery-3.svg');
+  protected readonly gallery_4 = signal('gallery-4.svg');
+  protected readonly gallery_5 = signal('gallery-5.svg');
+  protected readonly gallery_6 = signal('gallery-6.svg');
 
   activeSection = signal('about');
 
