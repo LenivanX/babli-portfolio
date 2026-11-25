@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, Footer],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -16,8 +17,8 @@ export class Home {
   protected readonly about_profile = signal('header_profile.jpg');
   protected readonly about_pin = signal('header_pin.svg');
   protected readonly about_arrow = signal('header_arrow.svg');
-  protected readonly about_box1 = signal('header_box1.jpg');
-  protected readonly about_box2 = signal('header_box2.jpg');
+  protected readonly previously = signal('uptye.png');
+  protected readonly currently = signal('keypr.png');
   protected readonly work_card1 = signal('work-card1.jpg');
   protected readonly gallery_1 = signal('gallery-1.svg');
   protected readonly gallery_2 = signal('gallery-2.svg');
@@ -25,6 +26,10 @@ export class Home {
   protected readonly gallery_4 = signal('gallery-4.svg');
   protected readonly gallery_5 = signal('gallery-5.svg');
   protected readonly gallery_6 = signal('gallery-6.svg');
+  protected readonly bts1 = signal('bts-1.svg');
+  protected readonly bts2 = signal('bts-2.svg');
+  protected readonly bts3 = signal('bts-3.svg');
+  protected readonly bts4 = signal('bts-4.svg');
 
   activeSection = signal('about');
 

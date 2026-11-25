@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
+import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-mia',
-  imports: [],
+  imports: [Footer],
   templateUrl: './mia.html',
   styleUrl: './mia.css',
 })
@@ -13,6 +14,11 @@ export class Mia {
   protected readonly miaSlider2Img2 = signal('mia-slider2-2.svg');
   protected readonly miaSlider3Img1 = signal('mia-slider3-1.svg');
   protected readonly miaSlider3Img2 = signal('mia-slider3-2.svg');
+  protected readonly miaPart4Phone = signal('mia-part4-phone.svg');
+  protected readonly floatingAppIcon1 = signal('floating-app-icon1.svg');
+  protected readonly floatingAppIcon2 = signal('floating-app-icon2.svg');
+  protected readonly handNotes = signal('hand-notes.svg');
+  
   currentSlide = 0;
 
   slides = [
